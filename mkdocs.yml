@@ -1,0 +1,31 @@
+site_name: FOSDEM Demo
+site_description: 'Write Drunk - Test Automated'
+site_author: 'TestTheDocs'
+theme:
+  name: 'material'
+  logo: 'images/logo.svg'
+  favicon: 'images/favicon.png'
+  palette:
+    primary: 'white'
+    accent: 'light blue'
+    #  feature:
+    #tabs: true
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+# Repository
+repo_name: testthedocs/fosdem-docs
+repo_url: https://github.com/testthedocs/fosdem-docs
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyleft &copy; 2019 - TestTheDocs'
+
+# Page tree
+nav:
+  - Home: index.md
+  - Docs as Code: docs-as-code.md
