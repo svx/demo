@@ -18,7 +18,8 @@ jobs:
       - checkout
       - run:
           command: |
-            su-exec ttd vale docs
+            pwd
+            ls -la
 
 workflows:
   version: 2
