@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           command: |
-            docker run --rm -i -v $PWD:/lint/input:ro testthedocs/ttd-remark docs
+            docker run --rm -i -v $PWD:/lint/input:ro zemanlx/remark-lint --frail docs
 
 workflows:
   version: 2
