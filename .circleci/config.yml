@@ -27,7 +27,7 @@ jobs:
       - checkout
       - run:
           command: |
-            su-exec ttd /usr/local/bin/remark docs
+            su-exec ttd /usr/local/bin/remark .
 
 workflows:
   version: 2
