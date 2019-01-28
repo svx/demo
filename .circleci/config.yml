@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           command: |
-            docker run --rm -i -v $PWD:/lint/input:ro zemanlx/remark-lint --frail docs
+            /usr/local/bin/remark docs
 
 workflows:
   version: 2
