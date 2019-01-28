@@ -27,7 +27,7 @@ jobs:
       - checkout
       - run:
           command: |
-            /usr/local/bin/entrypoint.sh.
+            /usr/local/bin/remark .
 
 workflows:
   version: 2
