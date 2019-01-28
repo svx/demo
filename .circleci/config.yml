@@ -11,18 +11,18 @@ jobs:
           command: |
             su-exec ttd /usr/local/bin/linkcheck -c '200,301,302' -t 5 docs
 
-  "markdown":
+  "vale":
     docker:
-      - image: zemanlx/remark-lint
+      - image: testthedocs/ttd-vale
     steps:
       - checkout
       - run:
           command: |
-            /usr/local/bin/remark docs
+            su-exec ttd vale docs
 
 workflows:
   version: 2
   btd:
     jobs:
       - "linkcheck"
-      - "markdown"
+      - "vale"
