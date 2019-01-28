@@ -9,9 +9,19 @@ before_install:
 - docker pull testthedocs/ttd-remark
 - docker pull testthedocs/vale-demo
 
+jobs:
+  include:
+    - stage: "Tests"
+      name: "Linkcheck"
+      script: docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
+      name: "Markdown"
+      script: docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
+      name: "Style guide"
+      script: docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
+
 script:
-- docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
+#- docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
 #- docker run --rm -i -v `pwd`/docs:/lint/input:ro testthedocs/ttd-remark .
-- docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
+#- docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
 #- docker run -it -v `pwd`/docs:/srv/tests testthedocs/ttd-vale
-- docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
+#- docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
