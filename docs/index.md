@@ -14,7 +14,6 @@ Different aspects of Continuous Integration Testing for documentation.
 
 ## Topics
 
-
 - Theory of CI testing, where it can help and where not.
 - Insights about your repository (Version Control Systems, VCS).
 - Strategy (what to test, level of testing and when).
@@ -22,4 +21,3 @@ Different aspects of Continuous Integration Testing for documentation.
 - Workflows (Make your devs happy).
 - Security.
 - Examples of production setups.
-

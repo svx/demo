@@ -1,3 +1,4 @@
+---
 version: 2
 
 jobs:
@@ -10,10 +11,19 @@ jobs:
           command: |
             su-exec ttd /usr/local/bin/linkcheck -c '200,301,302' -t 5 docs
 
+    "markdown":
+    docker:
+      - image: testthedocs/ttd-remark
+    steps:
+      - checkout
+      - run:
+          command: |
+            /usr/local/bin/remark docs
+
 workflows:
   version: 2
   btd:
     jobs:
       - "linkcheck"
-
+      - "markdown"
 
