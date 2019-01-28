@@ -1,6 +1,7 @@
 ---
 language: generic
 
+
 services:
   - docker
 
@@ -10,15 +11,16 @@ before_install:
 - docker pull testthedocs/vale-demo
 
 stages:
-  - linkcheck
+  - test
 
 jobs:
   include:
-    - stage: linkcheck
-      script: docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
+    - stage: test
+      script:
+      - docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
+      - docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
+      - docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
 
-      #script: docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
-      #script: docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
 
 #script:
 #- docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
@@ -26,3 +28,4 @@ jobs:
 #- docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
 #- docker run -it -v `pwd`/docs:/srv/tests testthedocs/ttd-vale
 #- docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
+
