@@ -11,5 +11,6 @@ before_install:
 
 script:
 - docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
-- docker run --rm -i -v `pwd`/docs:/lint/input:ro testthedocs/ttd-remark .
+#- docker run --rm -i -v `pwd`/docs:/lint/input:ro testthedocs/ttd-remark .
+docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
 - docker run -it -v `pwd`/docs:/srv/tests testthedocs/ttd-vale
