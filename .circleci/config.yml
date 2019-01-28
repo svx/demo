@@ -18,13 +18,21 @@ jobs:
       - checkout
       - run:
           command: |
-            pwd
-            ls -la
             su-exec ttd vale --config='/srv' docs
+
+  "makrdown":
+    docker:
+      - image: testthedocs/ttd-rl
+    steps:
+      - checkout
+      - run:
+          command: |
+            su-exec ttd /usr/local/bin/remark docs
 
 workflows:
   version: 2
   btd:
     jobs:
       - "linkcheck"
+      - "markdown"
       - "vale"
