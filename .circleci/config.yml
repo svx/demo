@@ -17,8 +17,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: |
-            /usr/local/bin/remark docs
+          docker run --rm -i -v $PWD/docs:/lint/input:ro zemanlx/remark-lint .
 
 workflows:
   version: 2
