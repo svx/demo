@@ -10,14 +10,15 @@ before_install:
 - docker pull testthedocs/vale-demo
 
 stages:
-  - test
+  - linkcheck
 
 jobs:
   include:
-    - stage: "test"
+    - stage: linkcheck
       script: docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
-      script: docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
-      script: docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
+
+      #script: docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
+      #script: docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
 
 #script:
 #- docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
