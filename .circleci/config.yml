@@ -20,7 +20,7 @@ jobs:
           command: |
             su-exec ttd vale --config='/srv' docs
 
-  "makrdown":
+  "markdown":
     docker:
       - image: testthedocs/ttd-rl
     steps:
