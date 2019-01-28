@@ -6,10 +6,10 @@ services:
 before_install:
 - docker pull testthedocs/ttd-linkcheck
 - docker pull testthedocs/ttd-remark
-- docker pull testthedocs/testthedocs/ttd-vale
+- docker pull testthedocs/ttd-vale
 
 
 script:
 - docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
-- docker run --rm -i -v `pwd`/docs:/lint/input:ro testthedocs/ttd-remark docs
+- docker run --rm -i -v `pwd`/docs:/lint/input:ro testthedocs/ttd-remark .
 - docker run -it -v `pwd`/docs:/srv/tests testthedocs/ttd-vale
