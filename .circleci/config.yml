@@ -20,6 +20,7 @@ jobs:
           command: |
             pwd
             ls -la
+            su-exec ttd vale --config='/srv' docs
 
 workflows:
   version: 2
