@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           command: |
-            /usr/local/bin/remark .
+            /usr/local/bin/remark docs
 
 workflows:
   version: 2
