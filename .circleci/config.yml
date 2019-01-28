@@ -13,7 +13,7 @@ jobs:
 
   "markdown":
     docker:
-      - image: testthedocs/ttd-remark
+      - image: zemanlx/remark-lint
     steps:
       - checkout
       - run:
