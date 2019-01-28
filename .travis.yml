@@ -5,4 +5,8 @@ services:
 
 before_install:
 - docker pull testthedocs/ttd-linkcheck
-- ls -la
+- docker pull testthedocs/ttd-remark-lint
+
+script:
+- docker run -v `pwd`:/srv/test testthedocs/ttd-linkcheck docs
+- docker run --rm -i -v $PWD:/lint/input:ro testthedocs/ttd-remark docs
