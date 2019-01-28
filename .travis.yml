@@ -1,7 +1,5 @@
 ---
 #language: generic
-sudo: true
-dist: xenial
 
 services:
   - docker
@@ -13,6 +11,7 @@ before_install:
 
 stages:
   - test
+  - building
 
 jobs:
   include:
@@ -21,12 +20,8 @@ jobs:
       - docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
       - docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
       - docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
+    - stage: building
+      script: ls -la
 
 
-#script:
-#- docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
-#- docker run --rm -i -v `pwd`/docs:/lint/input:ro testthedocs/ttd-remark .
-#- docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
-#- docker run -it -v `pwd`/docs:/srv/tests testthedocs/ttd-vale
-#- docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
 
