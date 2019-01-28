@@ -1,6 +1,6 @@
 # Docs as Code
 
-Author: [Eric Holscher](https://ericholscher.com) & the Write the Docs community
+Author: [Eric Holscher](https://twitter.com/ericholscher) & the Write the Docs community
 
 ---
 
