@@ -11,7 +11,7 @@ jobs:
           command: |
             su-exec ttd /usr/local/bin/linkcheck -c '200,301,302' -t 5 docs
 
-    "markdown":
+  "markdown":
     docker:
       - image: testthedocs/ttd-remark
     steps:
@@ -26,4 +26,3 @@ workflows:
     jobs:
       - "linkcheck"
       - "markdown"
-
