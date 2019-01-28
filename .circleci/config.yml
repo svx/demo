@@ -27,7 +27,7 @@ jobs:
       - checkout
       - run:
           command: |
-            su-exec ttd /usr/local/bin/remark .
+            /usr/local/bin/entrypoint.sh.
 
 workflows:
   version: 2
