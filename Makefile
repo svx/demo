@@ -17,11 +17,18 @@ help: ## This help message
 .PHONY: html
 html: ## Building HTML
 	@echo ""
-	@echo "$(YELLOW)==> Buildinig HTML $(VERSION)$(RESET)"
+	@echo "$(YELLOW)==> Buildinig HTML $(RESET)"
 	@docker run -it --rm -v `pwd`:/docs testthedocs/ttd-mkdocs:latest build
 
 .PHONY: serve
-serve: ## Startiing in serve mode
+serve: ## Starting in serve mode
 	@echo ""
 	@echo "$(YELLOW)==> Starting in serve mode $(VERSION)$(RESET)"
 	@docker run -it --rm -p 8000:8000 -v `pwd`:/docs testthedocs/ttd-mkdocs:latest serve
+
+.PHONY: style
+style: ## Run vale to check content style
+	@echo
+	@echo "$(YELLOW)==> Running content style checks $(RESET)"
+	@docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
+
