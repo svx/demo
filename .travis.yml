@@ -5,14 +5,9 @@ dist: xenial
 services:
   - docker
 
-before_install:
-- docker pull testthedocs/ttd-linkcheck
-- docker pull testthedocs/ttd-remark
-- docker pull testthedocs/vale-demo
-
 stages:
   - test
-  - building
+  - deploy
 
 jobs:
   include:
@@ -21,8 +16,10 @@ jobs:
       - docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
       - docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
       - docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
-    - stage: building
-      script: ls -la
+    - stage: deploy
+      script:
+      - docker run -it --rm -v `pwd`:/docs testthedocs/ttd-mkdocs:latest build
+      - .ci/deploy.sh
 
 
 
