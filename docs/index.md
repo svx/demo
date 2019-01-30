@@ -22,4 +22,3 @@ Different aspects of Continuous Integration Testing for documentation.
 - Security.
 - Examples of production setups.
 
-There is this one time.
