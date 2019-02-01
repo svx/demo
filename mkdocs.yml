@@ -19,7 +19,7 @@ markdown_extensions:
 
 # Repository
 repo_name: testthedocs/fosdem-docs
-repo_url: https://github.com/testthedocs/fosdem-docs
+repo_url: https://github.com/testthedocs/fosdem-demo
 edit_uri: ""
 
 # Copyright
