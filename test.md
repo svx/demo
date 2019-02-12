@@ -13,3 +13,5 @@ More testing, yes more testing.
 We add another line.
 
 This is a nice line
+
+A new line
