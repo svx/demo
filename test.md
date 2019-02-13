@@ -17,5 +17,8 @@ More things to add.
 
 Another line, yeah!
 
-This is a nice line
+This is a nice line.
 
+### Heading three
+
+Here more text.
