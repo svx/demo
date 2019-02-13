@@ -12,8 +12,10 @@ More testing, yes more testing.
 
 We add another line.
 
-This is a nice line.
 
 More things to add.
 
 Another line, yeah!
+
+This is a nice line
+
