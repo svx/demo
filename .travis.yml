@@ -6,11 +6,15 @@ services:
   - docker
 
 stages:
+  - validation
   - test
   - deploy
 
 jobs:
   include:
+    - stage: validation
+      script:
+      - .ci/check-changelog.sh
     - stage: test
       script:
       - docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
