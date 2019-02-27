@@ -14,7 +14,7 @@ jobs:
   include:
     - stage: validation
       script:
-      - .ci/check-changelog.sh
+      - .ci/check_changelog.sh
     - stage: test
       script:
       - docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
