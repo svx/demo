@@ -1,4 +1,4 @@
-# Docs as Code 
+# Docs as Code
 
 Author: [Eric Holscher](https://twitter.com/ericholscher) & the Write the Docs community
 
@@ -10,7 +10,7 @@ Documentation as Code (*Docs as Code*) refers to a philosophy that you should be
 
 - Issue Trackers
 - Version Control (Git)
-- Plain Text Markup (Markdown, reStructuredText, Asciidoc)
+- Plain Text Markup (Markdown, [reStructuredText](http://docutils.sourceforge.net/rst.html), Asciidoc)
 - Code Reviews
 - Automated Tests
 
