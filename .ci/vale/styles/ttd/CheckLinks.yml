@@ -1,0 +1,6 @@
+extends: existence
+message: 'Avoid using "%s" as link text'
+ignorecase: true
+level: suggestion
+tokens:
+  - foobar
