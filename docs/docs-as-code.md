@@ -15,6 +15,7 @@ Documentation as Code (*Docs as Code*) refers to a philosophy that you should be
 - Automated Tests
 
 This means following the same workflows as development teams, and being integrated in the product team.
+
 It enables a culture where writers and developers both feel ownership of documentation,
 and work together to make it as good as possible.
 

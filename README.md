@@ -1,7 +1,17 @@
-# DEMO
+<p align="center">
+ <h1 align="center">Demo</h1>
+</p>
 
-FOSDEM 2019 - Demo
+## About
 
-![Example screen](https://github.com/svx/fosdem-docs/blob/master/docs/images/demo-screen.png)
+Continuous integration for documentation quality assurance (Docs As Code).
 
-Demo URL: https://musing-raman-fd789e.netlify.com/
+![Example screen](https://github.com/svx/demo/blob/master/docs/images/demo-dac-screen.png)
+
+### License
+
+This project is licensed under the MIT License
+
+#### URL
+
+https://musing-raman-fd789e.netlify.com/

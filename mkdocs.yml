@@ -1,4 +1,4 @@
-site_name: FOSDEM Demo
+site_name: CI Demo
 site_description: 'Write Drunk - Test Automated'
 site_author: 'TestTheDocs'
 theme:
@@ -18,12 +18,12 @@ markdown_extensions:
       permalink: true
 
 # Repository
-repo_name: testthedocs/fosdem-docs
-repo_url: https://github.com/testthedocs/fosdem-demo
+repo_name: svx/demo
+repo_url: https://github.com/svx/demo
 edit_uri: ""
 
 # Copyright
-copyright: 'Copyleft &copy; 2019 - TestTheDocs'
+copyright: 'Copyleft &copy; 2019 - svx & TestTheDocs'
 
 # Page tree
 nav:
