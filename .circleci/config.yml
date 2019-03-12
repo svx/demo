@@ -13,12 +13,13 @@ jobs:
 
   "vale":
     docker:
-      - image: testthedocs/ttd-vale
+      - image: circleci/golang:1.12
     steps:
       - checkout
       - run:
           command: |
-            su-exec ttd vale --config='/srv' docs
+            go get github.com/ValeLint/vale
+            vale docs/*.md
 
 workflows:
   version: 2
