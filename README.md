@@ -2,6 +2,12 @@
  <h1 align="center">Demo</h1>
 </p>
 
+## Status
+
+[![Build Status](https://travis-ci.org/svx/demo.svg?branch=master)](https://travis-ci.org/svx/demo)
+
+[![CircleCI](https://circleci.com/gh/svx/demo.svg?style=svg)](https://circleci.com/gh/svx/demo)
+
 ## About
 
 Continuous integration for documentation quality assurance (Docs As Code).
