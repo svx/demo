@@ -1,1 +1,21 @@
-Add line with firemen
+# Examples
+
+## Bad
+
+### Wording
+
+The firemen arrived after one minute!
+
+### Link description
+
+Click [here](https://edition.cnn.com/) for more information.
+
+## Good
+
+### Wording
+
+The firefighters arrived after one minute!
+
+### Link description
+
+Check [CNN](https://edition.cnn.com/) for more information.
