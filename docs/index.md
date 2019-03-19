@@ -10,4 +10,4 @@ Documentation Quality Assurance
 
 Demo of Continuous Integration Testing for documentation (Docs As Code).
 
-Showcasing effortless QA checks with CircleCI and Travis.
+Showcasing effortless QA checks with [CircleCI](https://circleci.com/) and [Travis](https://travis-ci.org/).
