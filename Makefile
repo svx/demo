@@ -30,5 +30,4 @@ serve: ## Starting in serve mode
 style: ## Run vale to check content style
 	@echo
 	@echo "$(YELLOW)==> Running content style checks $(RESET)"
-	@docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
-
+	@vale docs/*.md

@@ -10,5 +10,6 @@ Documentation Quality Assurance
 
 Demo of Continuous Integration Testing for documentation (Docs As Code).
 
+Click [here](https://edition.cnn.com/) for more information.
 
 
