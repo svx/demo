@@ -15,7 +15,7 @@ jobs:
       script:
       - docker run -v `pwd`/docs:/srv/test testthedocs/ttd-linkcheck docs
       - docker run --rm -i -v `pwd`:/lint/input:ro testthedocs/ttd-remark docs
-      #- docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
+      - docker run -it -v `pwd`/docs:/srv/tests testthedocs/vale-demo
     - stage: deploy
       script:
       - docker run -it --rm -v `pwd`:/docs testthedocs/ttd-mkdocs:latest build
