@@ -4,7 +4,7 @@ version: 2
 jobs:
   "linkcheck":
     docker:
-      - image: testthedocs/cci-linkcheck
+        - image: testthedocs/cci-linkcheck:0.0.2
     steps:
       - checkout
       - run:
