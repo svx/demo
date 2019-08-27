@@ -2,7 +2,9 @@ name: Main workflow
 # This workflow is triggered on pushes to the repository.
 on: [push]
 jobs:
-  Links:
-    name: markdown-link-check
-    uses: gaurav-nelson/github-action-markdown-link-check@v0.1.0
+  Checks:
+    name: Linkcheck
+    steps:
+    - name: markdown-link-check
+      uses: gaurav-nelson/github-action-markdown-link-check@v0.1.0
 
