@@ -22,6 +22,6 @@ This project is licensed under the MIT License
 
 https://sleepy-snyder-1f3b01.netlify.com
 
-https://plonee.org
+https://ploonee.org
 
 https://plone.org
